@@ -1,4 +1,4 @@
-package thread01.src;
+package thread01.src.thread01;
 
 public class RacerByRunnable implements Runnable {
     private static String winner;

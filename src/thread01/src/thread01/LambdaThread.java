@@ -1,4 +1,4 @@
-package thread01.src;
+package thread01.src.thread01;
 
 /**
  * lambda表达式，简化线程（用一次）的使用

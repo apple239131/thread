@@ -1,4 +1,4 @@
-package thread01.src;
+package thread01.src.thread01;
 
 /**
  * 创建线程1：
