@@ -28,10 +28,12 @@ public class TermateThread extends Thread {
         this.flag = false;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         TermateThread thread1 = new TermateThread("apple");
+        Thread.sleep(10);
         thread1.start();
-        for (int i = 0; i <= 1000; i++) {
+
+        for (int i = 0; i <= 100; i++) {
             if (i == 14) {
                 thread1.terminate();
                 System.out.println("thread stop");
