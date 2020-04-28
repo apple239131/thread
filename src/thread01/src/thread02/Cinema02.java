@@ -15,7 +15,7 @@ public class Cinema02 {
 
         List<Integer> seats1=new ArrayList<>();
         seats1.add(1);
-        seats1.add(2);
+        seats1.add(4);
         List<Integer> seats2=new ArrayList<>();
         seats2.add(4);
         seats2.add(5);
@@ -23,6 +23,17 @@ public class Cinema02 {
         Cinema00 cinema00=new Cinema00(available,"华谊兄弟");
         new Thread(new Customer00(cinema00,seats1),"2391").start();
         new Thread(new Customer00(cinema00,seats2),"apple").start();
+
+        //可用位置为：[1, 2, 3, 4, 5, 6]
+        //出票成功2391>>[1, 2]
+        //可用位置为：[3, 4, 5, 6]
+        //出票成功apple>>[4, 5, 6]
+
+
+        //可用位置为：[1, 2, 3, 4, 5, 6]
+        //出票成功2391>>[1, 4]
+        //可用位置为：[2, 3, 5, 6]
+        //出票失败apple>>[4, 5, 6]
     }
 
 }
@@ -62,7 +73,7 @@ class Cinema00{
         List<Integer> temp=new ArrayList<>();
         temp.addAll(available);
 
-        temp.remove(seats);
+        temp.removeAll(seats);
         if (available.size() - temp.size() != seats.size()) {
             return false;
         }
