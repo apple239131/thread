@@ -1,7 +1,7 @@
 package thread01.src.thread03;
 
 /*
-协作模型:生产者消费者实现1：管程法，借助缓冲区
+协作模型:生产者消费者实现1：管程法，借助缓冲区，生产者把生产好的数据放到缓冲区，消费者从缓冲区拿到要处理的数据
  */
 public class CoTest01 {
     public static void main(String[] args) {
