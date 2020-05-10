@@ -41,7 +41,12 @@ public class DoubleCheckedLocking {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            instance = new DoubleCheckedLocking();
+            instance = new
+
+
+
+
+                    DoubleCheckedLocking();
         }
         return instance;
     }
